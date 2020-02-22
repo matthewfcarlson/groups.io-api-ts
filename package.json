@@ -1,0 +1,54 @@
+{
+  "name": "groups.io-api-ts",
+  "version": "1.0.0",
+  "description": "A typescript implementation of the groups.io api",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@liftr/tscov": "^1.4.4",
+    "@types/jest": "^25.1.0",
+    "cgx": "^1.10.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.1",
+    "ts-jest": "^25.0.0",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "prepublishOnly": "npm test && npm run lint && npm run format && npm run tscov",
+    "preversion": "npm run lint && npm run tscov",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prebuild": "npx rimraf ./dist && npm test && npm run lint && npm run format && npm run tscov",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "tscov": "tscov -m 90",
+    "cgx": "cgx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewfcarlson/groups.io-api-ts.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "library",
+    "groups.io",
+    "REST",
+    "api",
+    "npm"
+  ],
+  "author": "Matthew Carlson",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/matthewfcarlson/groups.io-api-ts/issues"
+  },
+  "homepage": "https://github.com/matthewfcarlson/groups.io-api-ts#readme"
+}
