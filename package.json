@@ -1,6 +1,6 @@
 {
   "name": "groups.io-api-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A typescript implementation of the groups.io api",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,7 +26,8 @@
     "tslint-loader": "^3.5.3",
     "typescript": "^3.7.5",
     "webpack": "3.5.5",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "axios": "^0.19.2"
   },
   "scripts": {
     "test": "jest --config jestconfig.json",
